@@ -9,7 +9,7 @@ export class MediaItemService {
   get(medium) {
     let searchParams = new URLSearchParams();
     searchParams.append('medium', medium);
-    return this.http.get('mediaitems', { search: searchParams})
+    return this.http.get('mediaitems', { search: searchParams })
       .map(response => {
         return response.json().mediaItems;
       });
